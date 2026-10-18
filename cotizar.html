@@ -76,12 +76,12 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-600 mb-1">Ancho (Pulgadas):</label>
-                            <input type="number" id="ancho" step="0.1" min="1" placeholder="Ej: 40" required 
+                            <input type="number" id="ancho" step="0.1" min="1" placeholder="Ej: 60" required 
                                    class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-600 mb-1">Alto (Pulgadas):</label>
-                            <input type="number" id="alto" step="0.1" min="1" placeholder="Ej: 40" required 
+                            <input type="number" id="alto" step="0.1" min="1" placeholder="Ej: 80" required 
                                    class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all">
                         </div>
                     </div>
@@ -131,7 +131,7 @@
 
             if (productoValor === 'puertas') {
                 seccionMedidas.style.display = 'none';
-                seccionInstalacion.style.display = 'none'; // Las puertas ya incluyen instalación fija
+                seccionInstalacion.style.display = 'none';
                 contenedorExtra.innerHTML = `
                     <div>
                         <label class="block text-sm font-bold text-slate-800 mb-2">Modelo de Puerta:</label>
@@ -142,7 +142,7 @@
                     </div>
                 `;
             } else if (productoValor === 'mamparas') {
-                seccionMedidas.style.display = 'block'; // Permite medir la mampara si se requiere
+                seccionMedidas.style.display = 'block';
                 seccionInstalacion.style.display = 'none';
                 contenedorExtra.innerHTML = `
                     <div class="bg-cyan-50 border border-cyan-200 p-3 rounded-xl text-xs text-cyan-800 font-semibold">
@@ -157,7 +157,8 @@
                         <label class="block text-sm font-bold text-slate-800 mb-2">Configuración del Clóset:</label>
                         <select id="subtipo-closet" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all">
                             <option value="sin">Sin divisiones</option>
-                            <option value="con">Con 2 divisiones</option>
+                            <option value="una">Con 1 división</option>
+                            <option value="dos">Con 2 divisiones</option>
                         </select>
                     </div>
                 `;
@@ -203,9 +204,8 @@
                 }
 
                 const pulgadasCuadradas = ancho * alto;
-                // Referencia base: Ventana 40x40 = 1600 pulg² -> Con instalacion: 4800, Sin instalacion: 3900
-                const tarifaConInstalacion = 4800 / 1600; // 3 pesos por pulgada cuadrada
-                const tarifaSinInstalacion = 3900 / 1600; // ~2.4375 pesos por pulgada cuadrada
+                const tarifaConInstalacion = 4800 / 1600; 
+                const tarifaSinInstalacion = 3900 / 1600; 
 
                 if (instalacion === 'si') {
                     subtotal = pulgadasCuadradas * tarifaConInstalacion;
@@ -227,25 +227,37 @@
                 }
 
                 const pulgadasCuadradas = ancho * alto;
-                // Referencia base clóset 60x80 = 4800 pulg²
-                let baseCon = tipoCloset === 'con' ? 17500 : 14000;
-                let baseSin = tipoCloset === 'con' ? 15500 : 12000;
                 
-                let tarifaCon = baseCon / 4800;
-                let tarifaSin = baseSin / 4800;
+                // Definición de bases según tipo de división (para medida base 60x80 = 4800 pulg²)
+                let baseConCon, baseSinCon;
+                let tipoDivisionesTexto = "";
 
-                const tipoDivisiones = tipoCloset === 'con' ? 'Con 2 divisiones' : 'Sin divisiones';
+                if (tipoCloset === 'dos') {
+                    baseConCon = 17500;
+                    baseSinCon = 15500;
+                    tipoDivisionesTexto = 'Con 2 divisiones';
+                } else if (tipoCloset === 'una') {
+                    baseConCon = 15750; // Proporcional entre 14,000 y 17,500
+                    baseSinCon = 13750; // Proporcional entre 12,000 y 15,500
+                    tipoDivisionesTexto = 'Con 1 división';
+                } else {
+                    baseConCon = 14000;
+                    baseSinCon = 12000;
+                    tipoDivisionesTexto = 'Sin divisiones';
+                }
+                
+                let tarifaCon = baseConCon / 4800;
+                let tarifaSin = baseSinCon / 4800;
 
                 if (instalacion === 'si') {
                     subtotal = pulgadasCuadradas * tarifaCon;
-                    detalleTexto = `- *Dimensiones:* ${ancho}" x ${alto}" (${pulgadasCuadradas.toLocaleString()} pulg²)%0A- *Tipo:* ${tipoDivisiones}%0A- *Modalidad:* Con Fabricación e Instalación`;
+                    detalleTexto = `- *Dimensiones:* ${ancho}" x ${alto}" (${pulgadasCuadradas.toLocaleString()} pulg²)%0A- *Tipo:* ${tipoDivisionesTexto}%0A- *Modalidad:* Con Fabricación e Instalación`;
                 } else {
                     subtotal = pulgadasCuadradas * tarifaSin;
-                    detalleTexto = `- *Dimensiones:* ${ancho}" x ${alto}" (${pulgadasCuadradas.toLocaleString()} pulg²)%0A- *Tipo:* ${tipoDivisiones}%0A- *Modalidad:* Solo Fabricación (Sin instalación)`;
+                    detalleTexto = `- *Dimensiones:* ${ancho}" x ${alto}" (${pulgadasCuadradas.toLocaleString()} pulg²)%0A- *Tipo:* ${tipoDivisionesTexto}%0A- *Modalidad:* Solo Fabricación (Sin instalación)`;
                 }
 
             } else {
-                // Gabinetes o Despensas genéricos proporcionales
                 const ancho = parseFloat(document.getElementById('ancho').value) || 0;
                 const alto = parseFloat(document.getElementById('alto').value) || 0;
                 const instalacion = document.getElementById('instalacion').value;
@@ -263,7 +275,7 @@
                 detalleTexto = `- *Dimensiones:* ${ancho}" x ${alto}"%0A- *Modalidad:* ${instalacion === 'si' ? 'Con Instalación' : 'Solo Fabricación'}`;
             }
 
-            const precioRedondeado = Math.round(subtotal / 100) * 100; // Redondeo a centenas cercanas
+            const precioRedondeado = Math.round(subtotal / 100) * 100;
             const precioFormateado = new Intl.NumberFormat('es-DO', { style: 'currency', currency: 'DOP' }).format(precioRedondeado);
 
             document.getElementById('resultado-container').classList.remove('hidden');
