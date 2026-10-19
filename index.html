@@ -36,7 +36,6 @@
                     </a>
                     <a href="#modalidades" class="hover:text-cyan-600 transition-colors">Con/Sin Montura</a>
                     <a href="#testimonios" class="hover:text-cyan-600 transition-colors">Testimonios</a>
-                    <a href="#faq" class="hover:text-cyan-600 transition-colors">Preguntas Frecuentes</a>
                 </nav>
 
                 <!-- Botón Acción Directa (Escritorio) -->
@@ -59,7 +58,6 @@
             <a href="cotizar.html" class="block text-cyan-600 font-bold hover:text-cyan-700 transition-colors py-1"><i class="fa-solid fa-calculator mr-2"></i> Cotizador Automático</a>
             <a href="#modalidades" onclick="toggleMenu()" class="block text-slate-700 hover:text-cyan-600 transition-colors py-1"><i class="fa-solid fa-screwdriver-wrench text-cyan-600 mr-2"></i> Con/Sin Montura</a>
             <a href="#testimonios" onclick="toggleMenu()" class="block text-slate-700 hover:text-cyan-600 transition-colors py-1"><i class="fa-solid fa-star text-cyan-600 mr-2"></i> Testimonios</a>
-            <a href="#faq" onclick="toggleMenu()" class="block text-slate-700 hover:text-cyan-600 transition-colors py-1"><i class="fa-solid fa-circle-question text-cyan-600 mr-2"></i> Preguntas Frecuentes</a>
             <div class="pt-3 border-t border-slate-100">
                 <a href="cotizar.html" class="w-full text-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 rounded-xl shadow-md block text-sm">
                     <i class="fa-solid fa-calculator mr-1"></i> Ir al Cotizador Online
@@ -125,4 +123,320 @@
     <section id="modalidades" class="py-14 bg-gradient-to-b from-slate-100 to-slate-50 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-700 bg-cyan-100 px
+                <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-700 bg-cyan-100 px-3.5 py-1.5 rounded-full">Modalidades de Trabajo</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-3">¿Cómo prefieres tu proyecto?</h2>
+                <p class="text-slate-600 text-sm mt-2">Nos adaptamos a tu presupuesto y necesidades. Elige la opción ideal para ti.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Con Montura -->
+                <div class="relative bg-white p-8 rounded-3xl shadow-md border-2 border-cyan-500 flex flex-col justify-between hover:shadow-xl transition-all">
+                    <span class="absolute -top-3.5 right-6 bg-cyan-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                        ⭐ Servicio Completo
+                    </span>
+                    <div>
+                        <div class="w-14 h-14 bg-cyan-100 text-cyan-700 rounded-2xl flex items-center justify-center text-2xl font-bold mb-5">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-2xl mb-2">Con Montura (Llave en Mano)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Nos encargamos de absolutamente todo para que no tengas que preocuparte por nada.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyan-600"></i> Medición técnica en tu residencia u obra</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyan-600"></i> Fabricación con materiales premium</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyan-600"></i> Transporte e instalación profesional garantizada</li>
+                            <li class="flex items-center gap-2 text-xs text-slate-500 bg-slate-50 p-2 rounded-lg border border-slate-100"><i class="fa-solid fa-truck text-cyan-600"></i> Cobertura en Santo Domingo y zonas cercanas</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/18099442504?text=Hola,%20me%20interesa%20un%20trabajo%20CON%20MONTURA" target="_blank" class="w-full text-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 rounded-xl transition-colors text-sm shadow-md block">
+                        Solicitar con Instalación
+                    </a>
+                </div>
+
+                <!-- Sin Montura -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="w-14 h-14 bg-slate-100 text-slate-700 rounded-2xl flex items-center justify-center text-2xl font-bold mb-5">
+                            <i class="fa-solid fa-boxes-packing"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-2xl mb-2">Sin Montura (Solo Fabricación)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Ideal para maestros constructores, ingenieros o clientes con su propio instalador.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-slate-500"></i> Fabricación exacta según tus medidas</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-slate-500"></i> Fabricación con materiales premium</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-slate-500"></i> Ahorras costo de mano de obra e instalación</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-slate-500"></i> Producto empacado y listo para retirar</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/18099442504?text=Hola,%20me%20interesa%20un%20trabajo%20SIN%20MONTURA" target="_blank" class="w-full text-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 rounded-xl transition-colors text-sm shadow-md block">
+                        Pedir Solo Fabricación
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería con Precios Sincronizados con el Cotizador -->
+    <section id="galeria" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Galería y Precios Estimados</h2>
+            <p class="text-slate-600 mt-2">Nuestros modelos más solicitados con precios base referenciales.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Producto 1: Ventanas -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                        <img id="img-ventanas" src="ventanas-yojansel.jpg" alt="Ventanas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='proyecto-1.jpeg'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-xl">Ventanas</h3>
+                        <p class="text-slate-600 text-sm mt-2">Diseños P-92 y P-40 con marcos de aluminio plateado, vidrios tintados, texturizados y cristales azules de diseño.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <p class="text-lg font-bold text-cyan-600 mb-4">Desde RD$ 3,900 (Calculado por pulgada)</p>
+                    <a href="cotizar.html" class="block text-center bg-cyan-50 hover:bg-cyan-100 text-cyan-700 font-semibold py-2.5 px-4 rounded-lg text-sm transition-colors">
+                        Calcular en Cotizador
+                    </a>
+                </div>
+            </div>
+
+            <!-- Producto 2: Gabinetes -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                        <img id="img-gabinetes" src="gabinetes-yojansel.jpg" alt="Gabinetes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='proyecto-2.jpeg'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-xl">Gabinetes</h3>
+                        <p class="text-slate-600 text-sm mt-2">Diseño moderno L-shape con paneles de cristal azul texturizado, herrajes de acero y cajones extraíbles de alta calidad.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <p class="text-lg font-bold text-cyan-600 mb-4">Desde RD$ 3,500 / m² aprox.</p>
+                    <a href="cotizar.html" class="block text-center bg-cyan-50 hover:bg-cyan-100 text-cyan-700 font-semibold py-2.5 px-4 rounded-lg text-sm transition-colors">
+                        Calcular en Cotizador
+                    </a>
+                </div>
+            </div>
+
+            <!-- Producto 3: Despensa -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                        <img id="img-despensa" src="Despensa.jpg" alt="Despensa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='proyecto-3.jpeg'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-xl">Despensa</h3>
+                        <p class="text-slate-600 text-sm mt-2">Diseño elegante con acabados de alta durabilidad, compartimentos organizadores y cristales decorativos.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <p class="text-lg font-bold text-cyan-600 mb-4">Desde RD$ 3,500 / m² aprox.</p>
+                    <a href="cotizar.html" class="block text-center bg-cyan-50 hover:bg-cyan-100 text-cyan-700 font-semibold py-2.5 px-4 rounded-lg text-sm transition-colors">
+                        Calcular en Cotizador
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Puertas -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                        <img id="img-puertas" src="puertas-yojansel.jpg" alt="Puertas Alumister" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="if(!this.dataset.retry){this.dataset.retry=1; this.src='puertas-yojansel.jpeg';} else if(this.dataset.retry==1){this.dataset.retry=2; this.src='puerta01.jpg';}">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-xl">Puertas</h3>
+                        <p class="text-slate-600 text-sm mt-2">Fabricación de puertas residenciales, comerciales y de paso. Variedad en acabados (blanca o caoba) e instalación incluida.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <p class="text-lg font-bold text-cyan-600 mb-4">RD$ 7,500 (Precio Fijo c/instalación)</p>
+                    <a href="cotizar.html" class="block text-center bg-cyan-50 hover:bg-cyan-100 text-cyan-700 font-semibold py-2.5 px-4 rounded-lg text-sm transition-colors">
+                        Calcular en Cotizador
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Clósets -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                        <img id="img-closets" src="closets-yojansel.jpg" alt="Clósets Alumister" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='closet 01.jpg'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-xl">Clósets</h3>
+                        <p class="text-slate-600 text-sm mt-2">Frentes e interiores de clóset a la medida. Estructuras resistentes a la humedad, opción con 1 o 2 divisiones y puertas corredizas.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <p class="text-lg font-bold text-cyan-600 mb-4">Desde RD$ 12,000 (Según divisiones)</p>
+                    <a href="cotizar.html" class="block text-center bg-cyan-50 hover:bg-cyan-100 text-cyan-700 font-semibold py-2.5 px-4 rounded-lg text-sm transition-colors">
+                        Calcular en Cotizador
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Mamparas -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                        <img id="img-mamparas" src="mamparas-yojansel.jpg" alt="Mamparas de baño Alumister" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="if(!this.dataset.retry){this.dataset.retry=1; this.src='mamparas-yojansel.jpeg';} else if(this.dataset.retry==1){this.dataset.retry=2; this.src='mampara-yojansel.jpg';}">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-xl">Mamparas</h3>
+                        <p class="text-slate-600 text-sm mt-2">Divisiones de baño estándar en cristal templado, herrajes de acero inoxidable e instalación incluida.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <p class="text-lg font-bold text-cyan-600 mb-4">RD$ 7,500 (Precio Fijo c/instalación)</p>
+                    <a href="cotizar.html" class="block text-center bg-cyan-50 hover:bg-cyan-100 text-cyan-700 font-semibold py-2.5 px-4 rounded-lg text-sm transition-colors">
+                        Calcular en Cotizador
+                    </a>
+                </div>
+            </div>
+
+            <!-- Portafolio Completo -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col md:col-span-2 lg:col-span-3 bg-gradient-to-r from-cyan-50 via-slate-50 to-blue-50">
+                <div class="p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex-1">
+                        <span class="bg-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Portafolio Multimedia</span>
+                        <h3 class="font-extrabold text-slate-900 text-2xl mt-2">Galería Interactiva de Proyectos</h3>
+                        <p class="text-slate-600 text-base mt-2">Explora nuestra galería completa con fotos y videos demostrativos de nuestras instalaciones de ventanas, gabinetes, closets, despensas y mamparas.</p>
+                    </div>
+                    <div class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
+                        <a href="galeria.html" class="block text-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3.5 px-8 rounded-xl shadow-md transition-all text-base">
+                            Ver Galería Completa
+                        </a>
+                        <a href="cotizar.html" class="block text-center bg-white border border-slate-300 text-slate-900 hover:bg-slate-100 font-bold py-3.5 px-6 rounded-xl shadow-md transition-all text-base">
+                            <i class="fa-solid fa-calculator text-cyan-600"></i> Cotizador Automático
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios / Reseñas de Clientes -->
+    <section id="testimonios" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-700 bg-cyan-100 px-3.5 py-1.5 rounded-full border border-cyan-200">
+                    Opiniones Reales
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-3 sm:text-4xl">Lo que dicen nuestros clientes</h2>
+                <p class="text-slate-600 text-sm mt-2">La satisfacción y confianza de quienes han transformado sus espacios con Alumister.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Reseña 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex text-amber-400 mb-3 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                            "Excelente trabajo con la instalación de mis ventanas P-92. Muy puntuales, limpios al trabajar y la calidad del vidrio y aluminio es de primera."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-cyan-600 text-white font-bold rounded-full flex items-center justify-center text-sm shadow">
+                            RC
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Roberto Castillo</h4>
+                            <span class="text-xs text-slate-500">Santo Domingo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reseña 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex text-amber-400 mb-3 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                            "Diseñaron los gabinetes y la despensa de mi cocina. Quedó súper moderna y elegante. El cotizador de la página web me dio el precio exacto."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-600 text-white font-bold rounded-full flex items-center justify-center text-sm shadow">
+                            AM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Ana María Gómez</h4>
+                            <span class="text-xs text-slate-500">Distrito Nacional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reseña 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex text-amber-400 mb-3 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                            "Compré la mampara de baño en opción 'Sin Montura' para instalarla con mi maestro de obra. Todo vino con las medidas exactas y bien empacado."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center text-sm shadow">
+                            JL
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Ing. José Luis Peña</h4>
+                            <span class="text-xs text-slate-500">Distrito Nacional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de Acción para que los Clientes Dejen su Opinión -->
+            <div class="mt-10 text-center">
+                <a href="https://wa.me/18099442504?text=Hola,%20soy%20cliente%20de%20Alumister%20y%20me%20gustaría%20dejar%20la%20siguiente%20reseña:%20" 
+                   target="_blank" 
+                   class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-6 py-3 rounded-xl border border-slate-300 text-sm transition-all shadow-sm">
+                    <i class="fa-solid fa-pen-to-square text-cyan-600"></i> ¿Trabajamos juntos? Déjanos tu opinión aquí
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-slate-500 py-8 text-center text-sm border-t border-slate-200 mt-auto">
+        <p>© 2026 Alumister - Carpintería de Aluminio & Vidrio Arquitectónico. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp Permanente -->
+    <a href="https://wa.me/18099442504?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20trabajos" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition-all duration-300 hover:scale-110 group"
+       title="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-slate-700">
+            ¡Escríbenos aquí!
+        </span>
+    </a>
+
+</body>
+</html>
